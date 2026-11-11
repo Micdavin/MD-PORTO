@@ -1,0 +1,1 @@
+(() => { const id=new URLSearchParams(location.search).get('project'); const exists=PORTO_PROJECTS.some(p=>p.id===id);location.replace('index.html'+(exists?'#project/'+encodeURIComponent(id):'#archive')); })();
