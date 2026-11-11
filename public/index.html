@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b10">
+<meta name="description" content="Michael Davin — web systems, data dashboards, and interactive 3D. Explore the original interfaces behind the work.">
+<title>Michael Davin — Selected works &amp; experiments</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="premium.css">
+<link rel="stylesheet" href="showcase.css">
+<link rel="stylesheet" href="responsive.css">
+<script src="assets/projects.js" defer></script>
+<script src="assets/showcase.js" defer></script>
+<script src="portfolio.js" defer></script>
+<script src="showcase-motion.js" defer></script>
+<script src="assets/vendor/three.js" defer></script>
+<script src="assets/scene-textures.js" defer></script>
+<script src="gallery3d.js" defer></script>
+</head>
+<body>
+<div class="ambient-glow-wrap" aria-hidden="true">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="bg-grid-overlay"></div>
+</div>
+<a class="skip" href="#work">Langsung ke project</a>
+<header class="site-header shell">
+  <a class="brand" href="#home" aria-label="Michael Davin — beranda">
+    <span class="brand-monogram">m<span>d</span><i></i></span>
+    <span class="brand-name">Michael Davin<span>FULL-STACK &bull; 3D &bull; SYSTEMS</span></span>
+  </a>
+  <div class="header-status">
+    <span class="live-dot"></span>
+    <span>AVAILABLE FOR WORK</span>
+  </div>
+  <nav aria-label="Navigasi utama">
+    <a href="#work">Selected work</a>
+    <a href="#archive">Project index <sup data-project-count>28</sup></a>
+    <a href="#about">About me</a>
+  </nav>
+  <a href="#archive" class="header-cta">Explore 28 projects <span>↗</span></a>
+</header>
+<main>
+<section id="home" class="hero shell">
+  <div class="hero-sticky">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="blue-dot"></span> PORTFOLIO &bull; MICHAEL DAVIN</p>
+      <h1>Thoughtful code.<br>Real-world<br><em>possibilities.</em></h1>
+      <p class="hero-description">Dari proses yang rumit menjadi pengalaman yang intuitif. Aku merancang dan membangun aplikasi bisnis, dashboard, dan ruang 3D yang menyatukan fungsi dengan desain.</p>
+      <div class="hero-actions">
+        <a href="#work" class="button dark">Explore selected work <span>↗</span></a>
+        <a href="#archive" class="button secondary">Browse 28 projects <span>⚡</span></a>
+      </div>
+      <div class="hero-footnote">
+        <span class="tiny-avatar">
+          <img src="assets/michael.jpeg" alt="Michael Davin" width="44" height="44">
+          <i class="avatar-beacon"></i>
+        </span>
+        <span>Michael Davin / Full-stack developer<br><strong>Dari ide, interface, hingga sistem yang bekerja.</strong></span>
+      </div>
+    </div>
+    <div class="hero-visual" id="playground">
+      <div class="visual-orbit" aria-hidden="true"></div>
+      <div class="visual-orbit second" aria-hidden="true"></div>
+      <div class="visual-orbit third" aria-hidden="true"></div>
+      <canvas id="hero-canvas" role="img" aria-label="Galeri layar project dalam ruang 3D. Geser untuk memutar."></canvas>
+      <div class="hero-fallback"><img src="assets/screens/demon.jpg" alt="Tampilan asli DEMON dashboard builder"></div>
+      <div class="visual-caption"><span class="small-cross">✦</span> SYSTEMS, IN PERSPECTIVE</div>
+      <div class="scene-projects" role="group" aria-label="Pilih preview 3D">
+        <button type="button" data-scene-project="pm-ai" aria-pressed="true">01 <span>PREMAN AI</span></button>
+        <button type="button" data-scene-project="demon" aria-pressed="false">02 <span>DEMON Studio</span></button>
+        <button type="button" data-scene-project="tradecore" aria-pressed="false">03 <span>TradeCore</span></button>
+      </div>
+      <div class="visual-controls">
+        <span>SCROLL TO DISCOVER &bull; DRAG TO ROTATE</span>
+        <button id="quality-toggle" class="quality-toggle" aria-pressed="false" title="Gunakan animasi 3D yang lebih ringan">Mode ringan</button>
+        <button id="reset-scene" aria-label="Reset posisi model 3D" title="Reset posisi">↺</button>
+        <button id="motion-toggle" aria-label="Jeda animasi" aria-pressed="false" title="Jeda/Jalankan animasi">Ⅱ</button>
+      </div>
+      <span class="visual-coordinate">INTERACTIVE SHOWCASE</span>
+    </div>
+    <div class="scroll-story">
+      <span class="story-number">01 / 03</span>
+      <span class="story-label">From an idea.</span>
+      <span class="story-track"><i></i></span>
+      <span class="story-hint">SCROLL TO EXPLORE &darr;</span>
+    </div>
+  </div>
+</section>
+
+<div class="intro-strip shell">
+  <span>A LITTLE CODE.<br>A LOT OF POSSIBILITIES.</span>
+  <div class="intro-window">
+    <div class="intro-track">
+      <div class="intro-group"><b>Web applications</b><i aria-hidden="true">&#10035;</i><b>Data &amp; intelligence</b><i aria-hidden="true">&#10035;</i><b>Interactive 3D</b><i aria-hidden="true">&#10035;</i><b>Creative experiments</b><i aria-hidden="true">&#10035;</i><b>Full-Stack Architecture</b><i aria-hidden="true">&#10035;</i></div>
+      <div class="intro-group intro-clone" aria-hidden="true"><b>Web applications</b><i aria-hidden="true">&#10035;</i><b>Data &amp; intelligence</b><i aria-hidden="true">&#10035;</i><b>Interactive 3D</b><i aria-hidden="true">&#10035;</i><b>Creative experiments</b><i aria-hidden="true">&#10035;</i><b>Full-Stack Architecture</b><i aria-hidden="true">&#10035;</i></div>
+    </div>
+  </div>
+</div>
+
+<section id="work" class="work-section shell">
+  <div class="section-heading showcase-heading">
+    <div>
+      <p class="eyebrow">01 &mdash; SELECTED WORK</p>
+      <h2>Ideas made real.<br><em>Details that matter.</em></h2>
+    </div>
+    <div class="work-intro">
+      <p>Dari platform belajar sampai sistem operasional. Temukan pendekatan, desain, dan fitur di balik setiap project.</p>
+      <button id="gallery-motion" class="gallery-motion" aria-pressed="false" aria-label="Jeda animasi galeri">
+        <span class="gallery-light"></span>
+        <span data-gallery-label>Pause gallery</span>
+        <span data-gallery-icon aria-hidden="true">&#8545;</span>
+      </button>
+    </div>
+  </div>
+  <div id="selected-work"></div>
+  <div class="work-caption">
+    <span class="desktop-hint"><i></i> Arahkan kursor untuk menjeda. Klik untuk menjelajah.</span>
+    <span class="mobile-hint">Geser untuk menjelajahi project</span>
+    <div class="gallery-navigation">
+      <button id="gallery-prev" aria-label="Project sebelumnya">&#8592;</button>
+      <span id="gallery-position" aria-live="polite">01 / 09</span>
+      <button id="gallery-next" aria-label="Project berikutnya">&#8594;</button>
+    </div>
+    <a class="work-all" href="#archive">Explore all projects <span data-project-count>28</span> &#8599;</a>
+  </div>
+</section>
+
+<section id="focus" class="focus-section shell">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">02 &mdash; BUILT AROUND REAL WORK</p>
+      <h2>More than a screen.<br><em>A way to work.</em></h2>
+    </div>
+    <p>Setiap project punya konteks operasional. <br>Ini beberapa hal yang kubantu buat lebih jelas dan efisien.</p>
+  </div>
+  <div class="focus-grid">
+    <article class="focus-item" data-reveal>
+      <div class="focus-art art-spatial" data-ambient aria-hidden="true">
+        <div class="mini-rack"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <span>SPACE &bull; STOCK &bull; MOVEMENT</span>
+      </div>
+      <span class="focus-number">01 / SPATIAL SYSTEMS</span>
+      <h3>Melihat ruang.<br>Menemukan barang.</h3>
+      <p>Lokasi stok dan susunan muatan lebih mudah dipahami ketika bisa dilihat dalam ruang 3D interaktif.</p>
+      <ul>
+        <li>Inspeksi rak dan pencarian sparepart real-time</li>
+        <li>Simulasi penempatan barang dalam kontainer logistik</li>
+      </ul>
+      <button class="focus-action" data-project="sweebv2">Lihat preview SWEEB 3D <span>&#8599;</span></button>
+    </article>
+    <article class="focus-item" data-reveal>
+      <div class="focus-art art-data" data-ambient aria-hidden="true">
+        <div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <span>MONITOR &bull; COMPARE &bull; UNDERSTAND</span>
+      </div>
+      <span class="focus-number">02 / DATA EXPERIENCES</span>
+      <h3>Membaca angka.<br>Memahami kondisi.</h3>
+      <p>Dari parameter mesin sampai susunan widget, interface membantu data kompleks lebih mudah ditelusuri.</p>
+      <ul>
+        <li>Monitoring dan visualisasi parameter telemetry mesin</li>
+        <li>Dashboard builder fleksibel dengan widget interaktif</li>
+      </ul>
+      <button class="focus-action" data-project="demon">Lihat preview DEMON Studio <span>&#8599;</span></button>
+    </article>
+    <article class="focus-item" data-reveal>
+      <div class="focus-art art-flow" data-ambient aria-hidden="true">
+        <div class="mini-flow"><i>01</i><b></b><i>02</i><b></b><i>03</i></div>
+        <span>INPUT &bull; PROCESS &bull; OVERVIEW</span>
+      </div>
+      <span class="focus-number">03 / BUSINESS WORKFLOWS</span>
+      <h3>Merapikan proses.<br>Menghubungkan langkah.</h3>
+      <p>Transaksi kasir, inventori multi-gudang, dan laporan keuangan ditempatkan dalam alur terintegrasi.</p>
+      <ul>
+        <li>Kasir cepat, pengelolaan stok, dan riwayat transaksi</li>
+        <li>Ringkasan performa bisnis dan kalkulasi HPP otomatis</li>
+      </ul>
+      <button class="focus-action" data-project="tradecore">Lihat preview TradeCore <span>&#8599;</span></button>
+    </article>
+  </div>
+  <div class="collection-facts">
+    <div><strong data-count="projects">28</strong><span>project dalam koleksi</span></div>
+    <div><strong data-count="categories">5</strong><span>bidang eksplorasi</span></div>
+    <div><strong data-count="selected">9</strong><span>karya pilihan</span></div>
+    <p>Dibangun, dicoba, <br>dan terus dikembangkan.</p>
+  </div>
+</section>
+
+<section id="archive" class="archive-section">
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">03 — THE COMPLETE COLLECTION</p>
+        <h2>A closer look<br>at <em>everything.</em><sup data-project-count>28</sup></h2>
+      </div>
+      <p>Project, versi, dan eksperimen terpilih. <br>Pilih satu kartu. Lihat screenshotnya. Jelajahi fiturnya.</p>
+    </div>
+    <div class="archive-tools">
+      <div class="filters" role="group" aria-label="Kategori project"></div>
+      <label class="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <path d="m16 16 4 4"/>
+        </svg>
+        <input id="project-search" type="search" placeholder="Cari project atau teknologi..." aria-label="Cari project">
+        <kbd>/</kbd>
+      </label>
+    </div>
+    <div class="archive-caption">
+      <span id="result-count" aria-live="polite"></span>
+      <span>MADE TO BE EXPLORED &#8595;</span>
+    </div>
+    <div id="project-index" class="collection-grid"></div>
+    <div class="collection-more">
+      <span id="collection-progress" aria-live="polite"></span>
+      <button id="load-more" type="button">Lihat lebih banyak</button>
+    </div>
+    <div id="empty-state" hidden>
+      <span>⌕</span>
+      <h3>Belum ketemu.</h3>
+      <p>Coba kata kunci lain atau lihat seluruh koleksi.</p>
+      <button class="button dark" id="clear-search">Reset pencarian ↗</button>
+    </div>
+  </div>
+</section>
+
+<section class="about-section shell" data-reveal id="about">
+  <div class="about-image">
+    <img src="assets/michael.jpeg" alt="Michael Davin" loading="lazy">
+    <div class="photo-sticker sticker-1">⚡ FULL-STACK &bull; 3D</div>
+    <div class="photo-sticker sticker-2">✦ CRAFTING EXPERIENCES</div>
+    <div class="photo-caption">THE HUMAN BEHIND THE SYSTEMS <span>↗</span></div>
+  </div>
+  <div class="about-copy">
+    <p class="eyebrow">04 — A LITTLE ABOUT ME</p>
+    <h2>Hi, I'm Michael.<br>Curious by nature.<br><em>Builder by choice.</em></h2>
+    <p>Aku Michael Davin. Aku mengembangkan aplikasi web modern, dashboard analitik, dan pengalaman 3D interaktif untuk membantu alur bisnis dan operasional menjadi lebih cepat, intuitif, dan transparan.</p>
+    <p>Aku menyukai pertemuan antara logika sistem dan detail visual. Koleksi ini mencakup pembelajaran bahasa, e-commerce, visualisasi gudang, monitoring mesin, dan operasional bisnis. Setiap interface dirancang agar informasi yang kompleks lebih mudah dipahami.</p>
+    <div class="skills">
+      <span>⚡ React / Next.js</span>
+      <span>🌐 Three.js &amp; WebGL</span>
+      <span>🐘 Laravel / PHP</span>
+      <span>📊 SQL &amp; Data Pipeline</span>
+      <span>🎨 Modern UI &amp; Micro-animations</span>
+      <span>🛠️ Digital Twin / IoT</span>
+    </div>
+    <a class="inline-link" href="#archive">Get to know me through my work <span>↗</span></a>
+  </div>
+</section>
+
+<section class="closing shell" data-reveal>
+  <p class="eyebrow">THE NEXT IDEA IS ALWAYS AROUND THE CORNER.</p>
+  <a href="#archive">
+    <span>Stay <em>curious.</em></span>
+    <span class="closing-arrow">↗</span>
+  </a>
+  <div>
+    <p>There's always something worth building.</p>
+    <span>DESIGNED TO BE EXPLORED.</span>
+  </div>
+</section>
+</main>
+
+<footer class="shell">
+  <a href="#home" class="footer-brand">md.</a>
+  <span>&copy; 2026 Michael Davin &bull; All Rights Reserved</span>
+  <a href="#home">Back to top ↑</a>
+</footer>
+
+<dialog id="project-dialog" aria-labelledby="dialog-title">
+  <header class="viewer-header">
+    <a class="viewer-brand" href="#archive" aria-label="Tutup project dan kembali ke index">md.</a>
+    <div>
+      <span id="viewer-category"></span>
+      <h2 id="dialog-title"></h2>
+    </div>
+    <div class="viewer-head-actions">
+      <button class="close-dialog" aria-label="Tutup project">✕</button>
+    </div>
+  </header>
+  <div class="viewer-body">
+    <aside class="viewer-info"></aside>
+    <section class="viewer-main">
+      <div class="viewer-toolbar">
+        <span class="viewer-type">PROJECT SHOWCASE</span>
+        <button id="zoom-preview" type="button" aria-pressed="false">Perbesar tampilan</button>
+      </div>
+      <div class="viewer-stage"></div>
+      <div class="viewer-bottom"></div>
+    </section>
+  </div>
+</dialog>
+
+<div class="reading-progress" aria-hidden="true"><i></i></div>
+<button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8593;</button>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
